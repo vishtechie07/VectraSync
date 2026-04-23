@@ -1,0 +1,30 @@
+html {
+  --lumo-primary-color: #7fdbca;
+  --lumo-primary-text-color: #7fdbca;
+  --lumo-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.thought-console {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  background: #0b0f14;
+  color: #d6deeb;
+  padding: var(--lumo-space-m);
+  border-radius: var(--lumo-border-radius-m);
+  border: 1px solid var(--lumo-contrast-10pct);
+  overflow-y: auto;
+  min-height: 280px;
+  max-height: 520px;
+}
+
+.thought-console-body { position: relative; }
+.thought-console pre { margin: 0; font-family: inherit; color: inherit; }
+.thought-console .trace-caret::after {
+  content: "\25AE";
+  color: #7fdbca;
+  animation: vsblink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes vsblink { 50% { opacity: 0; } }
